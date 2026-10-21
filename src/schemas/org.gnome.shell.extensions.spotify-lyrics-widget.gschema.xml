@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.spotify-lyrics-widget"
+          path="/org/gnome/shell/extensions/spotify-lyrics-widget/">
+
+    <key name="provider" type="s">
+      <default>'google'</default>
+      <summary>Provider terjemahan</summary>
+      <description>
+        google   = translate.googleapis.com (gratis, recommended)
+        mymemory = api.mymemory.translated.net (gratis, ada quota harian)
+        llm      = endpoint OpenAI-compatible (opencode serve / Ollama / OpenAI)
+        none     = tanpa terjemahan
+      </description>
+    </key>
+
+    <key name="target-languages" type="as">
+      <default>['en','id']</default>
+      <summary>Bahasa tujuan terjemahan</summary>
+      <description>Kode bahasa yang mau dipakai buat tab terjemahan.</description>
+    </key>
+
+    <key name="show-romaji" type="b">
+      <default>true</default>
+      <summary>Tampilkan tab Romaji</summary>
+      <description>
+        Menampilkan romanisasi lirik Korea (Revised Romanization) dan
+        Jepang (Hepburn). Kalau provider = llm, romaji dibuat oleh LLM.
+      </description>
+    </key>
+
+    <key name="use-local-lyrics" type="b">
+      <default>true</default>
+      <summary>Pakai folder lirik lokal</summary>
+      <description>
+        Cari file .lrc/.txt di ~/.local/share/spotify-lyrics-widget/lyrics
+        (nama file: "Artis - Judul.lrc"). Dicoba paling dulu, sebelum LRCLIB.
+      </description>
+    </key>
+
+    <key name="use-genius" type="b">
+      <default>false</default>
+      <summary>Pakai Genius sebagai sumber lirik</summary>
+      <description>
+        Untuk artis indie / lagu yang belum ada di LRCLIB (mis. Aryiion).
+        PERINGATAN: lirik diambil dari halaman lagu publik Genius karena API
+        resminya butuh login. Genius discourage automated access di ToS-nya,
+        jadi fitur ini default mati dan lo yang bertanggung jawab.
+        Catatan: Genius tidak punya timestamp, jadi highlight baris cuma
+        perkiraan.
+      </description>
+    </key>
+
+    <key name="llm-base-url" type="s">
+      <default>'http://127.0.0.1:4096/v1'</default>
+      <summary>Base URL LLM</summary>
+      <description>Endpoint OpenAI-compatible, contoh: http://127.0.0.1:4096/v1</description>
+    </key>
+
+    <key name="llm-api-key" type="s">
+      <default>''</default>
+      <summary>API key LLM</summary>
+      <description>Kosongkan kalau endpoint lokal (opencode serve / Ollama).</description>
+    </key>
+
+    <key name="llm-model" type="s">
+      <default>''</default>
+      <summary>Model LLM</summary>
+      <description>Nama model yang dipakai, contoh: anthropic/claude-sonnet-4-5</description>
+    </key>
+
+    <key name="font-scale" type="d">
+      <default>1.0</default>
+      <range min="0.7" max="2.0"/>
+      <summary>Ukuran font lirik</summary>
+      <description>Skala ukuran teks lirik di popup.</description>
+    </key>
+
+    <key name="popup-width" type="i">
+      <default>460</default>
+      <range min="320" max="900"/>
+      <summary>Lebar popup</summary>
+      <description>Lebar popup lirik dalam piksel.</description>
+    </key>
+
+    <key name="popup-height" type="i">
+      <default>520</default>
+      <range min="200" max="1200"/>
+      <summary>Tinggi area lirik</summary>
+      <description>Tinggi maksimum daftar lirik dalam piksel.</description>
+    </key>
+
+    <key name="show-timestamps" type="b">
+      <default>false</default>
+      <summary>Tampilkan timestamp</summary>
+      <description>Menampilkan timestamp LRC di depan tiap baris lirik.</description>
+    </key>
+
+    <key name="auto-scroll" type="b">
+      <default>true</default>
+      <summary>Auto scroll</summary>
+      <description>Gulung daftar lirik otomatis mengikuti baris yang sedang dimainkan.</description>
+    </key>
+
+    <key name="auto-fetch" type="b">
+      <default>true</default>
+      <summary>Ambil lirik otomatis</summary>
+      <description>Ambil lirik + terjemahan otomatis setiap ganti lagu.</description>
+    </key>
+
+    <key name="open-on-change" type="b">
+      <default>false</default>
+      <summary>Buka popup otomatis</summary>
+      <description>Buka popup widget setiap kali ganti lagu.</description>
+    </key>
+
+    <key name="panel-position" type="s">
+      <default>'right'</default>
+      <summary>Posisi di panel</summary>
+      <description>left / center / right</description>
+    </key>
+  </schema>
+</schemalist>

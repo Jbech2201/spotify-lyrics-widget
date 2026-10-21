@@ -1,0 +1,150 @@
+/* Style untuk popup lirik Spotify. */
+
+.lyrics-widget-menu {
+    width: 460px;
+}
+
+.lyrics-header-item,
+.lyrics-tab-item,
+.lyrics-lyrics-item,
+.lyrics-footer-item {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.lyrics-header-item {
+    padding: 10px 12px 6px 12px;
+}
+
+.lyrics-title {
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.lyrics-artist {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.lyrics-album {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85em;
+}
+
+.lyrics-cover {
+    padding-right: 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.lyrics-controls {
+    spacing: 6px;
+    padding-top: 8px;
+}
+
+.lyrics-control-button {
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.lyrics-time {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85em;
+    padding-left: 8px;
+}
+
+.lyrics-progress {
+    height: 4px;
+    margin-top: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+}
+
+.lyrics-progress-fill {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+}
+
+/* tab bahasa */
+.lyrics-tab-item {
+    padding: 2px 8px;
+}
+
+.lyrics-tabs {
+    spacing: 4px;
+}
+
+.lyrics-tab {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85em;
+}
+
+.lyrics-tab:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.lyrics-tab.active {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+}
+
+.lyrics-tabs-empty {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.85em;
+    padding: 4px 2px;
+}
+
+/* daftar lirik */
+.lyrics-lyrics-item {
+    padding: 4px 12px;
+}
+
+.lyrics-scroll {
+    max-height: 520px;
+}
+
+.lyrics-lines {
+    spacing: 6px;
+}
+
+.lyrics-line {
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.35;
+    padding: 1px 2px;
+}
+
+.lyrics-line-active {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.lyrics-empty {
+    color: rgba(255, 255, 255, 0.45);
+    padding: 8px 2px;
+}
+
+/* footer */
+.lyrics-footer-item {
+    padding: 4px 12px 8px 12px;
+}
+
+.lyrics-footer {
+    spacing: 8px;
+}
+
+.lyrics-status {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8em;
+}
+
+.lyrics-refresh-button {
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.8em;
+}

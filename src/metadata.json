@@ -1,0 +1,8 @@
+{
+  "uuid": "spotify-lyrics-widget@jbech",
+  "name": "Spotify Lyrics Widget",
+  "description": "Panel widget untuk Spotify: lirik original, romaji (Korea/Jepang), dan terjemahan (English/Indonesia) yang jalan baris-per-baris. Data lirik dari LRCLIB, terjemahan dari Google Translate / MyMemory / LLM OpenAI-compatible.",
+  "shell-version": ["50", "49", "48", "47"],
+  "session-modes": ["user"],
+  "settings-schema": "org.gnome.shell.extensions.spotify-lyrics-widget"
+}
